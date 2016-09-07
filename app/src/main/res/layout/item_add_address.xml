@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:background="@color/gray"
+    android:layout_height="50dp">
+
+    <TextView
+        android:theme="@style/WhiteBoldText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="주소 추가하기"
+        android:textSize="18sp"
+        android:id="@+id/textView25"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal" />
+</RelativeLayout>

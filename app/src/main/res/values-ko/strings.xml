@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">CleanBasketAndroid_V3</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="please_remeber">10,000원 이상 주문 시에만 방문 드릴 수 있어요!\n20,000원 미만 주문 시, 배달비 2,000원이 추가됩니다.\n세탁물 속에 남겨진 소지품은 없는지 확인해주세요.</string>
+
+    <string name="intro1">크린바스켓은\n고객님께 방문하는\n세탁물 수거 배달\n서비스입니다.</string>
+    <string name="intro2">우수한 세탁 품질을 위해\n30년 경력 장인이\n직접 세탁을 진행합니다.\n    </string>
+    <string name="intro3">세탁물을 맡긴 시간 이후\n48시간 이내로\n세탁 완료되어 고객님께\n배달해드립니다.</string>
+    <string name="intro4">서울 10개구와\n성남시 분당구에서\n서비스 중입니다.\n</string>
+
+    <string name="address">주소</string>
+    <string name="address_detail">나머지 주소</string>
+    <string name="address_detail_hint">나머지 주소를 입력해주세요.</string>
+    <string name="insert_dong">동을 입력해주세요. (예. 삼평동)</string>
+    <string name="not_correct_address">잘못된 검색 키워드입니다. </string>
+    <string name="dong">동</string>
+    <string name="input_detail_address">나머지 주소 입력하기</string>
+    <string name="not_service_district">서비스 지역이 아닙니다.</string>
+
+    <string name="total_price">총계</string>
+    <string name="won">원</string>
+
+    <string name="item">품목</string>
+    <string name="gae">개</string>
+
+    <string name="phone_number">핸드폰 번호</string>
+    <string name="phone_number_hint">핸드폰 번호를 입력해주세요.</string>
+
+    <string name="add_card">카드 추가</string>
+
+    <string name="order_success">주문이 완료되었습니다!</string>
+    <string name="goto_order_history">주문 현황 보러가기</string>
+
+    <string name="add_promotoin">프로모션 코드 추가</string>
+
+    <string name="nice_pay">NICEPAY에서 재공하는 결제 서비스입니다.</string>
+    <string name="card_number">카드번호</string>
+    <string name="availabe_dates">유효기간</string>
+    <string name="birth">생년월일</string>
+    <string name="password">비밀번호</string>
+
+</resources>

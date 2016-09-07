@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5ddbdb</color>
+    <color name="colorPrimaryDark">#7dbfc6</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#666666</color>
+    <color name="white_gray">#f4f4f4</color>
+    <color name="gray">#bcbcbc</color>
+
+    <color name="kakao_yellow">#FFEA0F</color>
+    <color name="kakao_brown">#2D1617</color>
+
+
+</resources>

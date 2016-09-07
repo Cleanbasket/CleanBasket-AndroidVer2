@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="주문 수정"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/timeUpdateContainer"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white_gray"
+        android:layout_below="@+id/titleBar">
+
+        <ImageView
+            android:id="@+id/timeImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_pickuptime" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timeImage"
+            android:layout_centerHorizontal="true"
+            android:text="시간 수정"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/itemUpdateContainer"
+        android:layout_width="match_parent"
+        android:background="@color/white_gray"
+        android:layout_height="100dp"
+        android:layout_below="@+id/timeUpdateContainer">
+
+        <ImageView
+            android:id="@+id/itemImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/white_gray"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_order_payment" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/itemImage"
+            android:layout_centerHorizontal="true"
+            android:text="품목 수정"
+            android:textSize="18sp"
+            android:textColor="@color/gray"
+            android:textStyle="bold"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/orderCancelContainer"
+        android:layout_width="match_parent"
+        android:background="@color/white_gray"
+        android:layout_height="100dp"
+        android:layout_below="@+id/itemUpdateContainer">
+        <ImageView
+            android:id="@+id/cancelImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_order_pickupreality" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cancelImage"
+            android:layout_centerHorizontal="true"
+            android:text="주문 취소"
+            android:textSize="18sp"
+            android:textColor="@color/gray"
+            android:textStyle="bold"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/orderCancelContainer"
+        android:background="@color/colorPrimaryDark"></RelativeLayout>
+
+</RelativeLayout>
