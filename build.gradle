@@ -12,6 +12,7 @@ buildscript {
 
         //For Fabric
         classpath 'io.fabric.tools:gradle:1.+'
+        classpath 'com.google.gms:google-services:3.0.0'
     }
 }
 

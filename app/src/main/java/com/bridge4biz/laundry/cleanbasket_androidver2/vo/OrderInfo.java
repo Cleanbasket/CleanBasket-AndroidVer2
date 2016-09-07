@@ -11,15 +11,6 @@ import java.util.Date;
 import java.util.List;
 
 
-/**
- * OrderInfo.java
- * CleanBasket Deliverer Android
- * <p/>
- * Created by Yongbin Cha on 16. 4. 8..
- * Copyright (c) 2016 WashAppKorea. All rights reserved.
- * "pickup_man\":0,\"dropoff_man\":0
- */
-
 public class OrderInfo {
     public Integer oid;
     public Integer uid;

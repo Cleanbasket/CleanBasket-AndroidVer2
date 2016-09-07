@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "26528065408",
+    "firebase_url": "https://project-561258547352407813.firebaseio.com",
+    "project_id": "project-561258547352407813",
+    "storage_bucket": "project-561258547352407813.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26528065408:android:1bde6fc356e3fdd2",
+        "android_client_info": {
+          "package_name": "com.bridge4biz.laundry.cleanbasket_androidver2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26528065408-is3qtrc0n8a8ni2k3aoe3jsv6v9569a3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzg0gfuBQz9GTSEtMEoGn-keuYncmVOro"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
