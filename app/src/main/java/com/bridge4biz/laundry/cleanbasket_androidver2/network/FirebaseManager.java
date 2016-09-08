@@ -1,9 +1,7 @@
 package com.bridge4biz.laundry.cleanbasket_androidver2.network;
 
-import android.util.Log;
-
-import com.bridge4biz.laundry.cleanbasket_androidver2.constants.Constants;
 import com.bridge4biz.laundry.cleanbasket_androidver2.vo.JsonData;
+import com.bridge4biz.laundry.cleanbasket_androidver2.vo.RegId;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -20,14 +18,11 @@ public class FirebaseManager {
     }
 
     public void sendRefreshTokenToServer(String refreshToken) {
-        Call<JsonData> call = firebaseInterface.sendRefreshToken(refreshToken);
+        Call<JsonData> call = firebaseInterface.sendRefreshToken(new RegId(refreshToken));
         call.enqueue(new Callback<JsonData>() {
             @Override
             public void onResponse(Call<JsonData> call, Response<JsonData> response) {
-                JsonData jsonData = response.body();
-                if(jsonData.constant == Constants.SUCCESS) {
-                    Log.d("파이어베이스", "교체 성공");
-                }
+
             }
 
             @Override

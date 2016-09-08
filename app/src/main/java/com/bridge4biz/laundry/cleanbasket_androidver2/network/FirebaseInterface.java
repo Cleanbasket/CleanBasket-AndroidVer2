@@ -2,10 +2,10 @@ package com.bridge4biz.laundry.cleanbasket_androidver2.network;
 
 import com.bridge4biz.laundry.cleanbasket_androidver2.constants.AddressConstant;
 import com.bridge4biz.laundry.cleanbasket_androidver2.vo.JsonData;
+import com.bridge4biz.laundry.cleanbasket_androidver2.vo.RegId;
 
 import retrofit2.Call;
-import retrofit2.http.Field;
-import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.Body;
 import retrofit2.http.POST;
 
 /**
@@ -13,7 +13,6 @@ import retrofit2.http.POST;
  */
 public interface FirebaseInterface  {
 
-    @FormUrlEncoded
     @POST(AddressConstant.FCM_REGID)
-    Call<JsonData> sendRefreshToken(@Field("regid") String token);
+    Call<JsonData> sendRefreshToken(@Body RegId regId);
 }

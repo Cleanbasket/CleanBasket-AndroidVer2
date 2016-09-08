@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
-import android.util.Log;
 
 import com.bridge4biz.laundry.cleanbasket_androidver2.R;
 import com.bridge4biz.laundry.cleanbasket_androidver2.activities.SplashActivity;
@@ -42,8 +41,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         mNotificationManager.notify(1, mBuilder.build());
 
-
-        Log.d("", "From: " + remoteMessage.getFrom());
-        Log.d("", "Notification Message Body: " + remoteMessage.getNotification().getBody());
+        
     }
 }

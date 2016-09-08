@@ -21,6 +21,8 @@ import com.bridge4biz.laundry.cleanbasket_androidver2.fragments.PromotionFragmen
 import com.bridge4biz.laundry.cleanbasket_androidver2.fragments.QuestionFragment;
 import com.bridge4biz.laundry.cleanbasket_androidver2.listeners.OnFragmentChangeClicked;
 import com.bridge4biz.laundry.cleanbasket_androidver2.listeners.OnKeyBackPressedListener;
+import com.bridge4biz.laundry.cleanbasket_androidver2.network.FirebaseManager;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         initFragment();
+        fcmRegIdSetting();
     }
 
     @BindView(R.id.viewpager)
@@ -129,6 +132,12 @@ public class MainActivity extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
+    }
+
+    private void fcmRegIdSetting() {
+        String regId = FirebaseInstanceId.getInstance().getToken();
+        FirebaseManager firebaseManager = new FirebaseManager();
+        firebaseManager.sendRefreshTokenToServer(regId);
     }
 
 }
