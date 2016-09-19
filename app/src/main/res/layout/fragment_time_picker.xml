@@ -2,9 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white_gray"
     android:orientation="vertical"
-    tools:context=".fragments.TimePickerFragment"
-    android:background="@color/white">
+    tools:context=".fragments.TimePickerFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -12,78 +12,80 @@
         android:layout_weight="10">
 
         <RelativeLayout
+            android:id="@+id/label_happyHours"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@color/white_gray"
-            android:id="@+id/label_happyHours">
+            android:background="@color/white_gray">
 
             <TextView
+                android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Happy Hours"
-                android:id="@+id/textView3"
-                android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
+                android:text="Happy Hours"
                 android:textStyle="bold" />
 
             <ImageView
+                android:id="@+id/imageView9"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:id="@+id/imageView9"
-                android:src="@mipmap/ic_launcher"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginRight="10dp" />
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_arrow_spread" />
         </RelativeLayout>
 
         <GridView
             android:id="@+id/happyHours"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/label_happyHours"
             android:layout_weight="4.5"
-            android:numColumns="2"
-            android:layout_below="@+id/label_happyHours" />
+            android:numColumns="2" />
 
         <RelativeLayout
+            android:id="@+id/label_commonHours"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@color/white_gray"
             android:layout_below="@+id/happyHours"
-            android:id="@+id/label_commonHours">
+            android:background="@color/white_gray">
 
             <TextView
+                android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Common Hours"
-                android:id="@+id/textView5"
-                android:textStyle="bold"
-                android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginLeft="10dp" />
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="Common Hours"
+                android:textStyle="bold" />
 
             <ImageView
+                android:id="@+id/imageView8"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:id="@+id/imageView8"
-                android:src="@mipmap/ic_launcher"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginRight="10dp" />
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_arrow_spread" />
         </RelativeLayout>
 
         <GridView
             android:id="@+id/commonHours"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/label_commonHours"
             android:layout_weight="6"
             android:focusableInTouchMode="false"
-            android:numColumns="2"
-            android:layout_below="@+id/label_commonHours" />
+            android:numColumns="2" />
     </RelativeLayout>
 
 </LinearLayout>

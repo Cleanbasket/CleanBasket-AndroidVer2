@@ -1,5 +1,6 @@
 package com.bridge4biz.laundry.cleanbasket_androidver2.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
@@ -132,6 +133,8 @@ public class OrderDetailActivity extends AppCompatActivity {
                 JsonData jsonData = response.body();
                 if (jsonData.constant == Constants.SUCCESS) {
                     application.setNewOrder(new Order());
+                    Intent intent = new Intent(OrderDetailActivity.this, OrderCompleteActivity.class);
+                    startActivity(intent);
                 }
                 setResult(2);
                 finish();

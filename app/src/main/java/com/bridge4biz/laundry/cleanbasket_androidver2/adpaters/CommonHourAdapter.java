@@ -49,7 +49,7 @@ public class CommonHourAdapter extends BaseAdapter {
         RelativeLayout container = (RelativeLayout) view.findViewById(R.id.container);
         TextView timeText = (TextView) view.findViewById(R.id.time);
         int startHour = timeList.get(position);
-        timeText.setText(String.format("%02d:00~%02d:00",startHour,startHour+ 1));
+        timeText.setText(String.format("%02d:00-%02d:00",startHour,startHour+ 1));
 
         return view;
     }

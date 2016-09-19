@@ -56,8 +56,8 @@ public class HappyHourAdapter extends BaseAdapter {
 
         TimeDiscount timeDiscount = discountList.get(position);
         int startHour = timeDiscount.getTime();
-        time.setText(String.format("%02d:00~%02d:00",startHour,startHour+ 1));
-        discount.setText(timeDiscount.getDiscount() + "%");
+        time.setText(String.format("%02d:00-%02d:00",startHour,startHour+ 1));
+        discount.setText(timeDiscount.getDiscount() + "% 할인");
         container.setBackgroundColor(context.getResources().getColor(timeDiscount.getBackgorundColor()));
         return view;
     }
