@@ -1,6 +1,6 @@
 package com.bridge4biz.laundry.cleanbasket_androidver2;
 
-import android.app.Application;
+import android.support.multidex.MultiDexApplication;
 
 import com.bridge4biz.laundry.cleanbasket_androidver2.utils.SharedPreferenceBase;
 import com.bridge4biz.laundry.cleanbasket_androidver2.vo.HappyHour;
@@ -20,7 +20,7 @@ import io.fabric.sdk.android.Fabric;
 /**
  * Created by gingeraebi on 2016. 6. 17..
  */
-public class CleanBasketApplication extends Application {
+public class CleanBasketApplication extends MultiDexApplication {
     //HappyHour에 대한 관리를 어디서 하는게 맞을것인가?
     public HashMap<Integer, Integer> discountHours = new HashMap();
 

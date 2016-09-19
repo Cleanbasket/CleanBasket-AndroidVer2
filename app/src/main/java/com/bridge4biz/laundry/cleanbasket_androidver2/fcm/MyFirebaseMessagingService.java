@@ -8,7 +8,7 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
 
 import com.bridge4biz.laundry.cleanbasket_androidver2.R;
-import com.bridge4biz.laundry.cleanbasket_androidver2.activities.SplashActivity;
+import com.bridge4biz.laundry.cleanbasket_androidver2.activities.ReviewActivity;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -24,10 +24,12 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                         .setContentTitle(remoteMessage.getData().get("title"))
                         .setContentText(remoteMessage.getData().get("text"));
 
-        Intent resultIntent = new Intent(this, SplashActivity.class);
+        Intent resultIntent = new Intent(this, ReviewActivity.class);
+        resultIntent.putExtra("type",remoteMessage.getData().get("type"));
+        resultIntent.putExtra("oid", remoteMessage.getData().get("oid"));
 
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-        stackBuilder.addParentStack(SplashActivity.class);
+        stackBuilder.addParentStack(ReviewActivity.class);
         stackBuilder.addNextIntent(resultIntent);
 
         PendingIntent resultPendingIntent =
@@ -41,6 +43,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         mNotificationManager.notify(1, mBuilder.build());
 
-        
+
     }
 }

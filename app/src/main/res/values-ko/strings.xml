@@ -42,4 +42,14 @@
     <string name="birth">생년월일</string>
     <string name="password">비밀번호</string>
 
+    <string name="pickup_review_title">수거 평가하기</string>
+    <string name="pickup_info">소중한 세탁물의 수거가 완료되었습니다.\n수거 서비스에 대한 평가부탁드립니다.</string>
+    <string name="pickup_question">크린파트너의 수거 서비스에 만족하셨나요?</string>
+    <string name="review_opinion">자유롭게 의견을 남겨주세요.</string>
+    <string name="review_mileage">평가 완료시 마일리지 500점을 드립니다,</string>
+
+    <string name="dropoff_review_title">배달 평가하기</string>
+    <string name="dropoff_info">소중한 세탁물의 세탁과 배달이 완료되었습니다. \n 서비스에 대한 평가 부탁드립니다.</string>
+    <string name="dropoff_question">크린파트너의 배달 서비스에 만족하셨나요?</string>
+
 </resources>

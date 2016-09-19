@@ -60,4 +60,6 @@ public class AddressConstant {
     public final static String ADD_PROMOTION = "member/promotion/add";
 
     public final static String FCM_REGID = "fcm/regid";
+
+    public final static String ADD_REVIEW = "review/add";
 }
