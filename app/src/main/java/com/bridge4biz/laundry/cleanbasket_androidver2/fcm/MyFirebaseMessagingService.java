@@ -1,5 +1,6 @@
 package com.bridge4biz.laundry.cleanbasket_androidver2.fcm;
 
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -41,7 +42,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         NotificationManager mNotificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        mNotificationManager.notify(1, mBuilder.build());
+
+        Notification notification = mBuilder.build();
+        notification.flags |= Notification.FLAG_AUTO_CANCEL;
+        mNotificationManager.notify(1, notification);
 
 
     }

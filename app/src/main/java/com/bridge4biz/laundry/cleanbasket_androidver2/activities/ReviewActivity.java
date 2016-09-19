@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -51,6 +52,8 @@ public class ReviewActivity extends AppCompatActivity {
     TextView infoText;
     @BindView(R.id.questionOne)
     TextView questionOneText;
+    @BindView(R.id.opinionEdit)
+    EditText opinionEdit;
 
     private void setDropOffUI() {
         titleText.setText(getResources().getString(R.string.dropoff_review_title));
@@ -61,7 +64,14 @@ public class ReviewActivity extends AppCompatActivity {
     @OnClick(R.id.complete)
     public void onCompleteClicked() {
         FirebaseManager firebaseManager = new FirebaseManager();
-        firebaseManager.sendReviewToServer(new Review(oid, reviewType, rate, "TEST"));
+        if(opinionEdit.getText() != null) {
+            firebaseManager.sendReviewToServer(new Review(oid, reviewType, rate, opinionEdit.getText().toString()));
+        }
+        else {
+            firebaseManager.sendReviewToServer(new Review(oid, reviewType, rate, ""));
+        }
+
+        finish();
     }
 
     @BindView(R.id.star_1st) ImageView star1st;
