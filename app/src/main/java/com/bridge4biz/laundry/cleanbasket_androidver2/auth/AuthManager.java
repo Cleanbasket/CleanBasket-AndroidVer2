@@ -44,4 +44,9 @@ public class AuthManager {
             }
         });
     }
+
+    public void signUpWithEmail(Callback<JsonData> emailCallback, String email, String password) {
+        Call<JsonData> call = authInterface.requestJoin(new UserData(email,password));
+        call.enqueue(emailCallback);
+    }
 }

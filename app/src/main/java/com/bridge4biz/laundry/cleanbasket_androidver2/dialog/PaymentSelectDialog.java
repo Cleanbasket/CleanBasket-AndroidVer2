@@ -13,12 +13,19 @@ import android.widget.TextView;
 import com.bridge4biz.laundry.cleanbasket_androidver2.CleanBasketApplication;
 import com.bridge4biz.laundry.cleanbasket_androidver2.R;
 import com.bridge4biz.laundry.cleanbasket_androidver2.listeners.OnCardSelectedListener;
+import com.bridge4biz.laundry.cleanbasket_androidver2.network.MyInfoManager;
+import com.bridge4biz.laundry.cleanbasket_androidver2.vo.JsonData;
 import com.bridge4biz.laundry.cleanbasket_androidver2.vo.Order;
+import com.bridge4biz.laundry.cleanbasket_androidver2.vo.PaymentData;
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by gingeraebi on 2016. 9. 5..
@@ -26,6 +33,7 @@ import butterknife.OnClick;
 public class PaymentSelectDialog extends DialogFragment {
     private OnCardSelectedListener onCardSelectedListener;
     private CleanBasketApplication cleanBasketApplication;
+    private boolean isCardExist = false;
 
     public static PaymentSelectDialog newInstance(OnCardSelectedListener onCardSelectedListener) {
         PaymentSelectDialog paymentSelectDialog = new PaymentSelectDialog();
@@ -46,8 +54,10 @@ public class PaymentSelectDialog extends DialogFragment {
         View rootView = inflater.inflate(R.layout.dialog_payment, container, false);
         ButterKnife.bind(this, rootView);
 
+        checkCardExist();
         cleanBasketApplication = (CleanBasketApplication) getActivity().getApplication();
         onInAppClicked();
+
 
         return rootView;
     }
@@ -92,6 +102,10 @@ public class PaymentSelectDialog extends DialogFragment {
         Order order = cleanBasketApplication.getNewOrder();
         order.payment_method = 3;
         cleanBasketApplication.setNewOrder(order);
+
+        if(!isCardExist) {
+
+        }
     }
 
     private void onTheSpotClicked() {
@@ -113,5 +127,30 @@ public class PaymentSelectDialog extends DialogFragment {
     public void onSelectBarClicked() {
         onCardSelectedListener.onCardSelected();
         dismiss();
+    }
+
+    private void checkCardExist() {
+        MyInfoManager myInfoManager = new MyInfoManager();
+        myInfoManager.checkPaymentExist(new Callback<JsonData>() {
+            @Override
+            public void onResponse(Call<JsonData> call, Response<JsonData> response) {
+                JsonData jsonData = response.body();
+
+                if (jsonData.constant == 1) {
+                    Gson gson = new Gson();
+                    PaymentData paymentData = gson.fromJson(jsonData.data, PaymentData.class);
+                    if (paymentData.isTrueData()) {
+                        isCardExist = true;
+                    } else {
+                        isCardExist = false;
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<JsonData> call, Throwable t) {
+
+            }
+        });
     }
 }

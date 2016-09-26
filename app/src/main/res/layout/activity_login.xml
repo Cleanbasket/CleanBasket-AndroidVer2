@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/backgroundImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
@@ -149,11 +149,80 @@
             android:theme="@style/EditText_White" />
 
         <LinearLayout
-            android:id="@+id/privacyChceckView"
+            android:id="@+id/privacyCheckView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:orientation="vertical">
 
+            <CheckBox
+                android:id="@+id/acceptAllCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/checkbox_white"
+                android:text="@string/accept_all"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/acceptTermsCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/checkbox_white"
+                    android:text="@string/accept_terms"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/show_detail"
+                    android:textColor="@color/white"
+                    android:textStyle="" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/acceptPrivacyCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/checkbox_white"
+                    android:text="@string/accept_privacy"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/show_detail"
+                    android:textColor="@color/white"
+                    android:textStyle="" />
+            </RelativeLayout>
 
 
         </LinearLayout>
@@ -246,7 +315,7 @@
             android:background="@color/colorPrimary">
 
             <Button
-                android:id="@+id/emailRegister"
+                android:id="@+id/showEmailRegisterButton"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@null"
@@ -256,7 +325,6 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/imageView"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -273,7 +341,7 @@
             android:background="@color/kakao_yellow">
 
             <Button
-                android:id="@+id/kakaoRegister"
+                android:id="@+id/kakaoRegisterButton"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@null"
@@ -283,7 +351,6 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/imageView15"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"

@@ -52,7 +52,6 @@ public class AddressListAdpapter extends ArrayAdapter<AddressInfo> {
 
         addressText.setText(addressInfos.get(position).getPrettyAddress());
 
-
         deleteImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,7 +61,7 @@ public class AddressListAdpapter extends ArrayAdapter<AddressInfo> {
                     @Override
                     public void onResponse(Call<JsonData> call, Response<JsonData> response) {
                         JsonData jsonData = response.body();
-                        if(jsonData.constant == 1) {
+                        if (jsonData.constant == 1) {
                             addressInfos.remove(addressInfo);
                             notifyDataSetChanged();
                         }

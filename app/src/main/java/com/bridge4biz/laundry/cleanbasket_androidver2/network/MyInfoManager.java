@@ -2,6 +2,7 @@ package com.bridge4biz.laundry.cleanbasket_androidver2.network;
 
 import com.bridge4biz.laundry.cleanbasket_androidver2.vo.Code;
 import com.bridge4biz.laundry.cleanbasket_androidver2.vo.JsonData;
+import com.bridge4biz.laundry.cleanbasket_androidver2.vo.PaymentData;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -35,6 +36,16 @@ public class MyInfoManager {
     public void addPromotion(Callback<JsonData> promotionCallback, String promotionCode) {
         Call<JsonData> call = myInfoInterface.addPromotion(new Code(promotionCode));
         call.enqueue(promotionCallback);
+    }
+
+    public void addPayment(Callback<JsonData> paymentCallback, PaymentData paymentData) {
+        Call<JsonData> call = myInfoInterface.addPayment(paymentData);
+        call.enqueue(paymentCallback);
+    }
+
+    public void checkPaymentExist(Callback<JsonData> paymentCallback) {
+        Call<JsonData> call = myInfoInterface.getPaymentInfo();
+        call.enqueue(paymentCallback);
     }
 
 }

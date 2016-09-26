@@ -109,7 +109,7 @@
         android:padding="2dp" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/cardNum4"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/cardNum3"
@@ -140,6 +140,7 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/month"
+        android:layout_marginLeft="10dp"
         android:layout_toEndOf="@+id/cardNum1"
         android:layout_toRightOf="@+id/cardNum1"
         android:background="@drawable/edit_white_gray"
@@ -147,8 +148,7 @@
         android:gravity="center"
         android:hint="YY"
         android:inputType="number"
-        android:padding="2dp"
-        android:layout_marginLeft="10dp" />
+        android:padding="2dp" />
 
     <EditText
         android:id="@+id/birth"
@@ -175,22 +175,31 @@
         android:gravity="center"
         android:inputType="number" />
 
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:text="@string/accept_payment" />
+
     <RelativeLayout
+        android:id="@+id/addCardBar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/colorPrimaryDark"
+        android:layout_below="@id/checkbox"
         android:layout_marginTop="20dp"
-        android:layout_below="@id/password"
-        >
+        android:background="@color/colorPrimaryDark">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textColor="@color/white"
-            android:text="@string/add_card"
             android:layout_centerInParent="true"
-            />
+            android:text="@string/add_card"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
     </RelativeLayout>
 

@@ -51,4 +51,11 @@
     <string name="dropoff_review_title">배달 평가하기</string>
     <string name="dropoff_info">소중한 세탁물의 세탁과 배달이 완료되었습니다. \n 서비스에 대한 평가 부탁드립니다.</string>
     <string name="dropoff_question">크린파트너의 배달 서비스에 만족하셨나요?</string>
+
+    <string name="accept_all">   전체 동의</string>
+    <string name="accept_terms">   이용 약관 동의(필수)</string>
+    <string name="accept_privacy">   개인정보 취급방침 동의(필수)</string>
+    <string name="show_detail"> <u>내용 보기</u></string>
+
+    <string name="accept_payment">   NICEPAY 정기과금 이용약관에 동의합니다.</string>
 </resources>

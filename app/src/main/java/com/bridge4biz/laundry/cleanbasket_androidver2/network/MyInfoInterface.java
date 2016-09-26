@@ -4,6 +4,7 @@ package com.bridge4biz.laundry.cleanbasket_androidver2.network;
 import com.bridge4biz.laundry.cleanbasket_androidver2.constants.AddressConstant;
 import com.bridge4biz.laundry.cleanbasket_androidver2.vo.Code;
 import com.bridge4biz.laundry.cleanbasket_androidver2.vo.JsonData;
+import com.bridge4biz.laundry.cleanbasket_androidver2.vo.PaymentData;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -25,4 +26,10 @@ public interface MyInfoInterface {
 
     @POST(AddressConstant.ADD_PROMOTION)
     Call<JsonData> addPromotion(@Body Code code);
+
+    @POST(AddressConstant.ADD_PAYMENT)
+    Call<JsonData> addPayment(@Body PaymentData paymentData);
+
+    @GET(AddressConstant.ADD_PAYMENT)
+    Call<JsonData> getPaymentInfo();
 }
