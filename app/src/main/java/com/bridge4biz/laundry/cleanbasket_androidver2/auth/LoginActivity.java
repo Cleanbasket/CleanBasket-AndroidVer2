@@ -79,12 +79,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    acceptAllCheck.setChecked(false);
-                }
-                if (!isChecked) {
                     acceptAllCheck.setChecked(true);
                     acceptPrivacyCheck.setChecked(true);
                     acceptTermsCheck.setChecked(true);
+                } else {
+                    acceptAllCheck.setChecked(false);
+                    acceptPrivacyCheck.setChecked(false);
+                    acceptTermsCheck.setChecked(false);
                 }
             }
         });
@@ -92,15 +93,17 @@ public class LoginActivity extends AppCompatActivity {
         acceptTermsCheck.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (acceptAllCheck.isChecked()) {
+                if (!acceptAllCheck.isChecked()) {
                     acceptAllCheck.setChecked(false);
-                }
-                if (isChecked) {
-                    acceptTermsCheck.setChecked(false);
+                }else {
+
                 }
                 if (!isChecked) {
+                    acceptTermsCheck.setChecked(false);
+                }
+                if (isChecked) {
                     acceptTermsCheck.setChecked(true);
-                    if (acceptPrivacyCheck.isChecked()) {
+                    if (!acceptPrivacyCheck.isChecked()) {
                         acceptAllCheck.setChecked(true);
                     }
                 }
@@ -110,14 +113,14 @@ public class LoginActivity extends AppCompatActivity {
         acceptPrivacyCheck.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (acceptAllCheck.isChecked()) {
+                if (!acceptAllCheck.isChecked()) {
                     acceptAllCheck.setChecked(false);
                 }
-                if (isChecked) {
+                if (!isChecked) {
                     acceptPrivacyCheck.setChecked(false);
                 } else {
                     acceptPrivacyCheck.setChecked(true);
-                    if (acceptTermsCheck.isChecked()) {
+                    if (!acceptTermsCheck.isChecked()) {
                         acceptAllCheck.setChecked(true);
 
                     }
